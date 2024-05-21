@@ -7,14 +7,15 @@ export const WeatherForm = ({onChangeCity}) => {
     function onChange(e){
         let value = e.target.value;
 
-        if(value === ''){
+        if(value !== ''){
+            console.log(value);
             setCity(value)
         }
     }
 
     function handleSubmit(e){
         e.preventDefault();
-
+        console.log(city);
         onChangeCity(city)
     }
 

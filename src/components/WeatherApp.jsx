@@ -6,7 +6,7 @@ export const WeatherApp = () => {
 
   async function loadInfo(city = 'london'){
     try {
-        console.log("test",);
+        console.log("test",city);
         const request = await fetch(`${process.env.REACT_APP_URL}key=${process.env.REACT_APP_KEY}&q=${city}&aqi=no`);
         
         const json = await request.json();
